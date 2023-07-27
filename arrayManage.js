@@ -50,7 +50,7 @@ let rockyObj = {
     let activeRecords = teamMembers.filter(member => member['Status'] === 'Active');
     let inactiveRecords = teamMembers.filter(member => member['Status'] === 'Inactive');
 
-    if (activeRecords.length > 1) {
+    if (inactiveRecords.length > 1) {
         for (let member of inactiveRecords) {
             console.log(`Active records not found for Name: ${member['Name']}`);
         }
