@@ -37,15 +37,27 @@ let rockyObj = {
     'Favorite Movie': 'the martian',
     'Status': 'Active'
   };
+
+   // My Object:
+   let anotherPerson = {
+    'Name': 'Alex Ponce',
+    'Favorite Food': 'Pizza',
+    'Favorite Movie': 'the martian',
+    'Status': 'Active'
+  };
+  
   
   // Creating array, adding objects, and adding the current date
-  let teamMembers = [rockyObj, miroslavObj, donnyObj, mattObj, myObj];
+  let  teamMembers = [rockyObj, miroslavObj, donnyObj, mattObj, myObj, anotherPerson];
+
   let currentDate = new Date();
   for (let member of teamMembers) {
     member['Date'] = currentDate;
   }
   
   // display  active records showing error messages
+
+
   function displayActiveRecords() {
     let activeRecords = teamMembers.filter(member => member['Status'] === 'Active');
     let inactiveRecords = teamMembers.filter(member => member['Status'] === 'Inactive');
@@ -63,10 +75,13 @@ let rockyObj = {
     }
   }
   
+
+
   // sort byName because Name is the first postion into the array
   function sortByProperty(property) {
     teamMembers.sort((a, b) => (a[property] > b[property]) ? 1 : -1);
   }
-  
+
+
   
   displayActiveRecords(); 
